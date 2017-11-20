@@ -15,11 +15,16 @@ import javax.persistence.Table;
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	private String myString;
+	
+	
 	@Id
 	@GeneratedValue
 	@Column(name = "u_id")
 	private int id;
 
+	
+	
 	@Column(name = "u_login", unique = true)
 	private String login;
 
