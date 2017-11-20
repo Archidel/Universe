@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String lol;
+	private String vasheNeLol;
 	
 	@Id
 	@GeneratedValue
