@@ -15,15 +15,11 @@ import javax.persistence.Table;
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private String vasheNeLol;
-	
 	@Id
 	@GeneratedValue
 	@Column(name = "u_id")
 	private int id;
 
-	
-	
 	@Column(name = "u_login", unique = true)
 	private String login;
 
@@ -39,12 +35,12 @@ public class User implements Serializable {
 	@Column(name = "u_blocked")
 	private boolean isBlocked;
 
-	@OneToMany(mappedBy="user", targetEntity = UserRole.class)
+	@OneToMany(mappedBy = "user", targetEntity = UserRole.class)
 	private List<UserRole> userRole;
 
-	@OneToMany(mappedBy="user", targetEntity = Person.class)
+	@OneToMany(mappedBy = "user", targetEntity = Person.class)
 	private List<Person> personList;
-	
+
 	public User() {
 	}
 
