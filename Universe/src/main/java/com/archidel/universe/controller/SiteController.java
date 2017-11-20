@@ -14,6 +14,12 @@ public class SiteController {
 		System.out.println("get method");
 		model.addAttribute("greeting", "Hello World from Spring 4 MVC");
 		return "index";
+		a
+		sd
+		as
+		da
+		sd
+		
 	}
 	
 }
