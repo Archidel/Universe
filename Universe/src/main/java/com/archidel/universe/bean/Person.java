@@ -16,9 +16,6 @@ import com.archidel.universe.bean.User;
 public class Person implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	
-	private String myString;
-	
 	@Id
 	@GeneratedValue
 	@Column(name = "p_id")
