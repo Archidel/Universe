@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.archidel.universe.bean.Account;
-import com.archidel.universe.bean.User;
+import com.archidel.universe.bean.user.User;
 import com.archidel.universe.service.UserService;
 import com.archidel.universe.service.exception.ServiceException;
 import com.archidel.universe.service.exception.ValidationServiceException;
@@ -32,9 +32,9 @@ public class GameController {
 			user = userService.verificationAccount(account);
 			logger.info(user.toString() + " has been verificated");
 		} catch (ValidationServiceException e) {
-			logger.error(account.toString() + " " + e.getMessage());
+			logger.error(account.toString(), e);
 		} catch (ServiceException e) {
-			logger.error(account.toString() + " " + e.getMessage());
+			logger.error(account.toString(), e);
 		}
 
 		return user;

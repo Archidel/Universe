@@ -14,8 +14,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import static org.hibernate.cfg.Environment.*;
 
 import com.archidel.universe.bean.Person;
-import com.archidel.universe.bean.User;
-import com.archidel.universe.bean.UserRole;
+import com.archidel.universe.bean.user.User;
+import com.archidel.universe.bean.user.UserRole;
 
 @Configuration
 @EnableTransactionManagement

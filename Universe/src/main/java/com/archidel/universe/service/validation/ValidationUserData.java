@@ -4,8 +4,9 @@ import com.archidel.universe.bean.Account;
 
 public final class ValidationUserData {
 
-	private ValidationUserData() {}
-	
+	private ValidationUserData() {
+	}
+
 	public static boolean validAccount(Account account) {
 		if (validString(account.getLogin()) && validString(account.getPassword())) {
 			return true;

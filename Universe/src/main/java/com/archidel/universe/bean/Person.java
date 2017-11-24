@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.archidel.universe.bean.User;
+import com.archidel.universe.bean.user.User;
 
 @Entity
 @Table(name = "person")

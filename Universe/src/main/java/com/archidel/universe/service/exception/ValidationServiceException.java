@@ -1,6 +1,6 @@
 package com.archidel.universe.service.exception;
 
-public class ValidationServiceException extends ServiceException{
+public class ValidationServiceException extends ServiceException {
 	private static final long serialVersionUID = 1L;
 
 	public ValidationServiceException() {
@@ -18,5 +18,4 @@ public class ValidationServiceException extends ServiceException{
 		super(message, e);
 	}
 
-	
 }
