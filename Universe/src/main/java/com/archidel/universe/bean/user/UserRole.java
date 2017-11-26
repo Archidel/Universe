@@ -5,9 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -16,17 +14,23 @@ public class UserRole implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue()
 	@Column(name = "ur_id")
 	private long id;
-	
+
 	@Column(name = "ur_name")
 	private String name;
 
-	@ManyToOne(targetEntity = User.class)
-	private User user;
-
 	public UserRole() {
+	}
+
+	public UserRole(long id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public UserRole(String name) {
+		this.name = name;
 	}
 
 	public long getId() {
@@ -45,17 +49,9 @@ public class UserRole implements Serializable {
 		this.name = name;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
 	@Override
 	public String toString() {
-		return "UserRole [id=" + id + ", name=" + name + ", user=" + user + "]";
+		return "UserRole [id=" + id + ", name=" + name + "]";
 	}
 
 }

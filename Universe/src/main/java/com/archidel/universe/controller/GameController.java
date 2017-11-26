@@ -37,6 +37,7 @@ public class GameController {
 			logger.error(account.toString(), e);
 		}
 
+		System.out.println(user.toString());
 		return user;
 	}
 
